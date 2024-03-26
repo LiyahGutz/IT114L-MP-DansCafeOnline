@@ -29,7 +29,7 @@ namespace Dans_Cafe
                     {
                         if (user.Password == passtxtbox.Text)
                         {
-                            Response.Write("<script>window.setTimeout(function(){ window.location.href = 'Home.aspx'; }, 1000);</script>");
+                            Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
                         }
                         else
                         {
