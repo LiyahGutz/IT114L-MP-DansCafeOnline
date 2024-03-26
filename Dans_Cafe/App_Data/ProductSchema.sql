@@ -1,0 +1,12 @@
+﻿DROP TABLE IF EXISTS [dbo].[Products];
+
+
+CREATE TABLE Products (
+	prodID VARCHAR(10) NOT NULL,
+	prodName VARCHAR(50) NOT NULL,
+	prodDesc VARCHAR(255) NOT NULL,
+	prodType VARCHAR(10) NOT NULL,
+	Price FLOAT NOT NULL,
+	prodSize VARCHAR(10) NOT NULL,
+	prodStatus BIT NOT NULL
+)

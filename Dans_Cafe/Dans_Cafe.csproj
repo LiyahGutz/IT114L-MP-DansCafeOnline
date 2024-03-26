@@ -67,12 +67,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\UserSchema.mdf" />
-    <Content Include="App_Data\UserSchema_log.ldf">
-      <DependentUpon>UserSchema.mdf</DependentUpon>
+    <Content Include="App_Data\DansCafeDB.mdf" />
+    <Content Include="App_Data\DansCafeDB_log.ldf">
+      <DependentUpon>DansCafeDB.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\InsertProductsSchema.sql" />
+    <Content Include="App_Data\ProductSchema.sql" />
+    <Content Include="App_Data\UserSchema.sql" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Order.aspx" />
+    <Content Include="Pictures\products\0001.png" />
+    <Content Include="Pictures\products\0002.png" />
     <Content Include="Properties\coffees.png" />
     <Content Include="Properties\coffee_wall.jpg" />
     <Content Include="Properties\latte.png" />
@@ -81,6 +87,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Products\Product.cs" />
     <Compile Include="App\Users\RepositoryUsers.cs" />
     <Compile Include="App\Users\User.cs" />
     <Compile Include="Home.aspx.cs">
@@ -96,6 +103,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUp.aspx.cs">
