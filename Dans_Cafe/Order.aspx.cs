@@ -16,7 +16,6 @@ namespace Dans_Cafe
             string username = Request.QueryString["username"];
             Session["username"] = username;
 
-            
             ProductData();
         }
 
