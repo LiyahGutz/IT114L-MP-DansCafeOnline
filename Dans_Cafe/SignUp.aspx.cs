@@ -1,4 +1,4 @@
-﻿using Dans_Cafe.App.Users;
+ ﻿using Dans_Cafe.App.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace Dans_Cafe
 {
-    public partial class SignUp : Page
+    public partial class SignUp : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,7 +21,7 @@ namespace Dans_Cafe
             {
                 string newEmail = Email.Text;
 
-                if (!IsExistingUser(newEmail))
+                if (!ExistUser(newEmail))
                 {
                     var userRepo = new RepositoryUsers();
 
@@ -29,27 +29,39 @@ namespace Dans_Cafe
                     {
                         FirstName = Fname.Text,
                         LastName = Lname.Text,
-                        Email = newEmail,
+                        Email = Email.Text,
                         Username = Username.Text,
                         Password = Password.Text,
                     });
 
                     ClearValues();
 
-                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('You are now registered!');", true);
+                    Response.Write("<script>alert('You are now registered!');</script>");
                     Response.Redirect("Login.aspx");
+                    //Response.Write("<script>window.setTimeout(function(){ window.location.href = 'login.aspx'; }, 1000);</script>");
                 }
                 else
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alert", $"alert('Email {newEmail} is already used.');", true);
+                    string alreadyExist = "Email already used.";
+                    Response.Write($"<script>alert('{alreadyExist}')</script>");
                     ClearValues();
                 }
             }
+
+
+
         }
 
         protected bool validSignUp()
         {
-            return Page.IsValid;
+            if (Page.IsValid)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         protected void ClearValues()
@@ -62,10 +74,12 @@ namespace Dans_Cafe
             Password.Text = "";
         }
 
-        protected bool IsExistingUser(string newEmail)
+        protected bool ExistUser(string newUser)
         {
-            var userRepo = new RepositoryUsers();
-            return userRepo.GetAllUsers().Any(user => user.Email == newEmail);
+            RepositoryUsers repos = new RepositoryUsers();
+            IEnumerable<User> userPeople = repos.GetAllUsers();
+
+            return userPeople.Any(user => user.Email == newUser);
         }
     }
 }
