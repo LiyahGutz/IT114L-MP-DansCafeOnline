@@ -33,6 +33,7 @@ namespace Dans_Cafe.App.Users
 
         public IEnumerable<User> LogIn(string username)
         {
+
             using (var connection = new SqlConnection(connectionString))
             using (var logCommand = connection.CreateCommand())
             {
