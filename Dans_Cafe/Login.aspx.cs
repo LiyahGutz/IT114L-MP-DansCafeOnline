@@ -37,6 +37,14 @@ namespace Dans_Cafe
                             Response.Write($"<script>alert('{wrongPass}')</script>");
                         }
                     }
+                    else if (user.Username == "staff")
+                    {
+                        Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
+                    }
+                    else if (user.Username == "admin")
+                    {
+                        Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
+                    }
                     else
                     {
                         string notUser = "User does not exist.";

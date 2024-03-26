@@ -9,7 +9,7 @@ namespace Dans_Cafe.App.Users
 {
     public class RepositoryUsers
     {
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Aaliyah Gutierrez\source\repos\Dans_Cafe\Dans_Cafe\App_Data\UserSchema.mdf"";Integrated Security=True";
+        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Aaliyah Gutierrez\source\repos\DANS\Dans_Cafe\App_Data\DansCafeDB.mdf"";Integrated Security=True";
 
         public void NewUser(User user)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dans_Cafe.App.Products;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,8 +13,17 @@ namespace Dans_Cafe
         protected void Page_Load(object sender, EventArgs e)
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
-            
+            string username = Request.QueryString["username"];
+            Session["username"] = username;
 
+            ProductData();
+        }
+
+        protected void ProductData()
+        {
+            RepositoryProducts repoProduct = new RepositoryProducts();
+            ProdItemRepeater.DataSource = repoProduct.AllProducts();
+            ProdItemRepeater.DataBind();
         }
     }
 }
