@@ -80,6 +80,7 @@
     <Content Include="Order.aspx" />
     <Content Include="Pictures\products\00001.png" />
     <Content Include="Pictures\products\00002.png" />
+    <Content Include="Pictures\products\00003.png" />
     <Content Include="Properties\coffees.png" />
     <Content Include="Properties\coffee_wall.jpg" />
     <Content Include="Properties\latte.png" />
