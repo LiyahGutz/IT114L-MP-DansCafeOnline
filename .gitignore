@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Dans_Cafe/App_Data/DansCafeDB.mdf
+/Dans_Cafe/bin/Dans_Cafe.dll
+/Dans_Cafe/bin/Dans_Cafe.pdb
+/Dans_Cafe/obj/Debug/Dans_Cafe.csproj.CoreCompileInputs.cache
+/Dans_Cafe/obj/Debug/Dans_Cafe.dll
+/Dans_Cafe/obj/Debug/Dans_Cafe.pdb
+/Dans_Cafe/App_Data/DansCafeDB_log.ldf
