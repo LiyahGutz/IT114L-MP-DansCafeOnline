@@ -13,5 +13,13 @@ namespace Dans_Cafe
         {
 
         }
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            string logOut = "Logged Out Successfully.";
+            Response.Write($"<script>alert('{logOut}')</script>");
+            Response.Redirect("Login.aspx");
+            
+        }
     }
 }
