@@ -180,7 +180,7 @@
     </style>
     <form id="homepage" runat="server">
         <div class="contain">
-            <p class="welcome">WELCOME TO DAN'S CAFE, <%=Session["firstname"] %>!</p>
+            <p class="welcome">WELCOME TO DAN'S CAFE, <%=Session["username"] %>!</p>
             <p class="intro">Indulge in the cozy place with quality foods and drinks here! Experience our fresh coffee</p>
         </div>
    
@@ -192,7 +192,7 @@
                 </div>
                 <p style="color: white; text-align: center;">With our freshly brewed coffee, and you can choose any blends you like</p>
                 <%--<button class="button"><span>TAKE A SIP</span></button>--%>
-                <asp:Button ID="buttons" Text="TAKE A SIP" runat="server" PostBackURL="Order.aspx"/>
+                <asp:Button ID="buttons"  runat="server" Text="TAKE A SIP" OnClick="TakeASip_Click" />
             </div>
             <div class="square">
                 <img src="Properties/pastries.png" style="width: 100%" />

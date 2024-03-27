@@ -27,7 +27,12 @@ namespace Dans_Cafe
         protected void Page_Load(object sender, EventArgs e)
         {
             string username = Request.QueryString["username"];
-            Session["firstname"] = username;
+            Session["username"] = username;
+        }
+
+        protected void TakeASip_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Order.aspx?username=" + Session["username"]);
         }
     }
 }

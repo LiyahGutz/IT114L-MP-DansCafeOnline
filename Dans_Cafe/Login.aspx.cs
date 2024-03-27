@@ -1,4 +1,4 @@
-﻿using Dans_Cafe.App.Users;
+improve this code using Dans_Cafe.App.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +36,14 @@ namespace Dans_Cafe
                             string wrongPass = "Incorrect Password";
                             Response.Write($"<script>alert('{wrongPass}')</script>");
                         }
+                    }
+                    else if (user.Username == "staff")
+                    {
+                        Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
+                    }
+                    else if (user.Username == "admin")
+                    {
+                        Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
                     }
                     else
                     {
