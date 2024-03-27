@@ -1,13 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Dans_Cafe.Home" %>
+﻿<%@ Page MasterPageFile="~/BasicMasterPage.Master" Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Dans_Cafe.Home" %>
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head runat="server">
-    <title>Home</title>
-</head>
-
-<body>
+<asp:Content ID="Home" ContentPlaceHolderID="MainContent" runat="server">
     <style>
         body {
             background-image: url(Properties/coffee_wall.jpg);
@@ -249,8 +242,5 @@
         </footer>
 
     </form>
-    
-</body>
-
-</html>
+</asp:Content>
 
