@@ -31,20 +31,21 @@ namespace Dans_Cafe
                         {
                             Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
                         }
+                        else if (user.Password == "staff")
+                        {
+                            Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
+                        }
+                        else if (user.Password == "admin")
+                        {
+                            Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
+                        }
                         else
                         {
                             string wrongPass = "Incorrect Password";
                             Response.Write($"<script>alert('{wrongPass}')</script>");
                         }
                     }
-                    else if (user.Username == "staff")
-                    {
-                        Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
-                    }
-                    else if (user.Username == "admin")
-                    {
-                        Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
-                    }
+                    
                     else
                     {
                         string notUser = "User does not exist.";
