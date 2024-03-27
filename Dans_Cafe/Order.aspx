@@ -27,7 +27,6 @@
             background-color: #782b14;
             border-color: #782b14;
         }
-
         .btn:hover {
             background-color: #311108;
         }
@@ -37,12 +36,13 @@
         <h3>Hello, <%=Session["username"] %></h3>
         <div class="container">
             <div class="row">
-                <asp:Repeater ID="ProdItemRepeater" runat="server">
+                <asp:Repeater ID="ProdItemRepeater" runat="server" OnItemCommand="ProdItemRepeater_ItemCommand">
                     <ItemTemplate>
                         <div class="col-md-3 mb-3">
                             <div class="img">
                                 <img class="prodPic" src="Pictures/products/<%# Eval("ID") %>.png" />
                                 <p><%# Eval("Name") %></p>
+                                
                                 <!-- Button to trigger modal -->
                                 <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#<%# "myModal_" + Container.ItemIndex %>">
                                     View Product
@@ -59,16 +59,24 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body" aria-checked="mixed">
                                         <!-- Modal Body Content -->
                                         <!-- You can add any additional details or controls here -->
                                         <img class="modalPic" src="Pictures/products/<%# Eval("ID") %>.png" />
                                         <p><%# Eval("Description") %></p>
+                                        <p>Price: P<asp:Label ID="PriceLbl" runat="server" Text='<%# Eval("Price") %>'></asp:Label></p>
+
+
+                                        <asp:Label ID="Qty" runat="server">Quantity: </asp:Label>
+                                        <asp:TextBox ID="ProductQuantity" TextMode="Number" runat="server" value="1"></asp:TextBox><br />
+                                        <asp:RangeValidator ID="RVQuantity" runat="server" ControlToValidate="ProductQuantity" MinimumValue="1" MaximumValue="100" />
                                     </div>
                                     <div class="modal-footer">
+                                        <asp:Button runat="server" ID="PushCart" class="btn btn-secondary" Text="Add to Cart" data-dismiss="modal" CommandName="PushCart" CommandArgument='<%# Eval("ID") %>' />
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                         <!-- Additional buttons or actions can be added here if needed -->
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -78,5 +86,6 @@
         </div>
     </form>
 
+    
 </body>
 </html>

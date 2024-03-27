@@ -81,6 +81,7 @@
     <Content Include="Pictures\products\00001.png" />
     <Content Include="Pictures\products\00002.png" />
     <Content Include="Pictures\products\00003.png" />
+    <Content Include="Pictures\products\00004.png" />
     <Content Include="Properties\coffees.png" />
     <Content Include="Properties\coffee_wall.jpg" />
     <Content Include="Properties\latte.png" />
@@ -89,6 +90,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Carts\Cart.cs" />
+    <Compile Include="App\Carts\RepositoryCarts.cs" />
     <Compile Include="App\Products\Product.cs" />
     <Compile Include="App\Products\RepositoryProducts.cs" />
     <Compile Include="App\Users\RepositoryUsers.cs" />
