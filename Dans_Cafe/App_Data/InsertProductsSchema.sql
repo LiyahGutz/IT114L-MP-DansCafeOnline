@@ -19,3 +19,23 @@ INSERT INTO Products VALUES (
 	'Regular',
 	'True'
 );
+--Carbonara
+INSERT INTO Products VALUES (
+	'00003',
+	'Carbonara',
+	'Creamy Pasta with Cheesy Goodness',
+	'food',
+	'120',
+	'Regular',
+	'True'
+);
+--Baked Mac
+INSERT INTO Products VALUES (
+	'00004',
+	'Baked Mac',
+	'Creamy Macaroni with Cheesy Goodness',
+	'food',
+	'120',
+	'Regular',
+	'True'
+);
