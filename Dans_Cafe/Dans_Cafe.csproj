@@ -64,6 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminView.aspx" />
     <Content Include="App_Data\DansCafeDB.mdf" />
     <Content Include="App_Data\DansCafeDB_log.ldf">
       <DependentUpon>DansCafeDB.mdf</DependentUpon>
@@ -75,8 +76,11 @@
     <Content Include="assets\bootstrap\js\bootstrap.min.js" />
     <Content Include="assets\css\Navbar-Right-Links-icons.css" />
     <Content Include="assets\img\logo.png" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="CreateStaff.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="ManageStaff.aspx" />
     <Content Include="Order.aspx" />
     <Content Include="Pictures\products\00001.png" />
     <Content Include="Pictures\products\00002.png" />
@@ -87,15 +91,37 @@
     <Content Include="Properties\latte.png" />
     <Content Include="Properties\pastries.png" />
     <Content Include="SignUp.aspx" />
+    <Content Include="StaffView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminView.aspx.cs">
+      <DependentUpon>AdminView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminView.aspx.designer.cs">
+      <DependentUpon>AdminView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App\Carts\Cart.cs" />
     <Compile Include="App\Carts\RepositoryCarts.cs" />
     <Compile Include="App\Products\Product.cs" />
     <Compile Include="App\Products\RepositoryProducts.cs" />
     <Compile Include="App\Users\RepositoryUsers.cs" />
     <Compile Include="App\Users\User.cs" />
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateStaff.aspx.cs">
+      <DependentUpon>CreateStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateStaff.aspx.designer.cs">
+      <DependentUpon>CreateStaff.aspx</DependentUpon>
+    </Compile>
     <Compile Include="lol.Master.cs">
       <DependentUpon>lol.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -124,6 +150,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ManageStaff.aspx.cs">
+      <DependentUpon>ManageStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageStaff.aspx.designer.cs">
+      <DependentUpon>ManageStaff.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Order.aspx.cs">
       <DependentUpon>Order.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,6 +171,13 @@
     </Compile>
     <Compile Include="SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffView.aspx.cs">
+      <DependentUpon>StaffView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffView.aspx.designer.cs">
+      <DependentUpon>StaffView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
