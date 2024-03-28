@@ -75,12 +75,16 @@
     <Content Include="App_Data\UserSchema.sql" />
     <Content Include="assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\css\contactUs.css" />
+    <Content Include="assets\css\createStaff.css" />
     <Content Include="assets\css\Navbar-Right-Links-icons.css" />
+    <Content Include="assets\css\signUp.css" />
     <Content Include="assets\img\logo.png" />
     <Content Include="ContactUs.aspx" />
     <Content Include="CreateStaff.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="assets\css\login.css" />
     <Content Include="ManageStaff.aspx" />
     <Content Include="Order.aspx" />
     <Content Include="Pictures\products\00001.png" />
