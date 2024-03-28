@@ -1,15 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="Dans_Cafe.ContactUs" %>
+﻿<%@ Page MasterPageFile="~/BasicMasterPage.Master" Language="C#" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="Dans_Cafe.ContactUs" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title> Contact Us | Dan's Cafe</title>
-    <%--links--%>
+<asp:Content ID="ContactUs" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" type="text/css" href="assets/css/contactUs.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-</head>
-<body>
     <div class="contact-section">
         <div class="title">
             <h2>Contact Us</h2>
@@ -19,7 +12,7 @@
                and we're committed to providing you with the best experience possible. Feel free to 
                contact us via Facebook, Instagram, or TikTok. We look forward to hearing from you!</p>
         </div>
-        <form id="form1" runat="server">
+        <%--<form id="form1" runat="server">--%>
             <div class="contactUs">
                 <div class="card">
                     <div class="icon">
@@ -43,7 +36,6 @@
                     <asp:Button class="btn" runat="server" Text="Visit" OnClientClick="window.location.href='https://www.tiktok.com/@dans.cafe'; return false;"/>
                 </div>
             </div>
-        </form>
+        <%--</form>--%>
     </div>
-</body>
-</html>
+</asp:Content>
