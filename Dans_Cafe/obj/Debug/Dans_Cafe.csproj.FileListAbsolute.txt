@@ -239,3 +239,13 @@ C:\Users\Rane\Desktop\joshRepos\Dans_Cafe\obj\Debug\Dans_Cafe.csproj.CoreCompile
 C:\Users\Rane\Desktop\joshRepos\Dans_Cafe\obj\Debug\Dans_Cafe.csproj.Up2Date
 C:\Users\Rane\Desktop\joshRepos\Dans_Cafe\obj\Debug\Dans_Cafe.dll
 C:\Users\Rane\Desktop\joshRepos\Dans_Cafe\obj\Debug\Dans_Cafe.pdb
+C:\Users\Rane\Desktop\mainRepo\Dans_Cafe\bin\Dans_Cafe.dll.config
+C:\Users\Rane\Desktop\mainRepo\Dans_Cafe\bin\Dans_Cafe.dll
+C:\Users\Rane\Desktop\mainRepo\Dans_Cafe\bin\Dans_Cafe.pdb
+C:\Users\Rane\Desktop\mainRepo\Dans_Cafe\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Rane\Desktop\mainRepo\Dans_Cafe\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Rane\Desktop\mainRepo\Dans_Cafe\obj\Debug\Dans_Cafe.csproj.AssemblyReference.cache
+C:\Users\Rane\Desktop\mainRepo\Dans_Cafe\obj\Debug\Dans_Cafe.csproj.CoreCompileInputs.cache
+C:\Users\Rane\Desktop\mainRepo\Dans_Cafe\obj\Debug\Dans_Cafe.csproj.Up2Date
+C:\Users\Rane\Desktop\mainRepo\Dans_Cafe\obj\Debug\Dans_Cafe.dll
+C:\Users\Rane\Desktop\mainRepo\Dans_Cafe\obj\Debug\Dans_Cafe.pdb
