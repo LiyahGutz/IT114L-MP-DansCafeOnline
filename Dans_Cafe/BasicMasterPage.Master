@@ -17,7 +17,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="Home.aspx">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
                 </ul><a class="btn btn-primary bg-danger border-warning ms-md-2" role="button" href="Login.aspx">Log In/Sign Up</a>
             </div>
         </div>

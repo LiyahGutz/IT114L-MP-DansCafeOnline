@@ -64,6 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CartSchema.sql" />
     <Content Include="App_Data\DansCafeDB.mdf" />
     <Content Include="App_Data\DansCafeDB_log.ldf">
       <DependentUpon>DansCafeDB.mdf</DependentUpon>

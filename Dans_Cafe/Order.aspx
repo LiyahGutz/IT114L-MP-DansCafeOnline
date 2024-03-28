@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Dans_Cafe.Order" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Dans_Cafe.Order" EnableEventValidation="true" %>
 
 <!DOCTYPE html>
 
@@ -68,11 +68,11 @@
 
 
                                         <asp:Label ID="Qty" runat="server">Quantity: </asp:Label>
-                                        <asp:TextBox ID="ProductQuantity" TextMode="Number" runat="server" value="1"></asp:TextBox><br />
-                                        <asp:RangeValidator ID="RVQuantity" runat="server" ControlToValidate="ProductQuantity" MinimumValue="1" MaximumValue="100" />
+                                        <asp:TextBox ID="ProductQuantity" TextMode="Number" runat="server">1</asp:TextBox><br />
+                                        <%--<asp:RangeValidator ID="RVQuantity" runat="server" ControlToValidate="ProductQuantity" MinimumValue="1" MaximumValue="100" />--%>
                                     </div>
                                     <div class="modal-footer">
-                                        <asp:Button runat="server" ID="PushCart" class="btn btn-secondary" Text="Add to Cart" data-dismiss="modal" CommandName="PushCart" CommandArgument='<%# Eval("ID") %>' />
+                                        <asp:Button runat="server" ID="PushCart" class="btn btn-secondary" Text="Add to Cart" CommandName="PushCart" CommandArgument='<%# Eval("ID") %>' />
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                         <!-- Additional buttons or actions can be added here if needed -->
                                     </div>

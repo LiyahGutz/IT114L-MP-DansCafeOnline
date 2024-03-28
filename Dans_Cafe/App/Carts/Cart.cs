@@ -12,8 +12,8 @@ namespace Dans_Cafe.App.Carts
         public string prodID { get; set; }
         public string prodName { get; set; }
         public int Quantity { get; set; }
-        public double Price { get; set; }
-        public double OrderTotal { get; set; }
+        public float Price { get; set; }
+        public float OrderTotal { get; set; }
         public string Status { get; set; }
         public TimeSpan TimeOrder { get; set; }
         public DateTime OrderDate { get; set; }
