@@ -21,6 +21,22 @@ namespace Dans_Cafe
             ProductData();
         }
 
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            foreach (RepeaterItem item in ProdItemRepeater.Items)
+            {
+                Button Button = (Button)item.FindControl("PushCart"); // Assuming PushCart is a LinkButton
+                if (Button != null)
+                {
+                    ScriptManager.GetCurrent(this).RegisterPostBackControl(Button);
+                }
+            }
+        }
+        protected void Cart_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserCart.aspx?username=" + Request.QueryString["username"]);
+        }
+
         protected void ProductData()
         {
             RepositoryProducts repoProduct = new RepositoryProducts();
