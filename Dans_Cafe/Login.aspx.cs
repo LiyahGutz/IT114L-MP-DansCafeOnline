@@ -29,16 +29,29 @@ namespace Dans_Cafe
                     {
                         if (user.Password == passtxtbox.Text)
                         {
-                            Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
+                            if (user.Username == "staff" && user.Password == "staff")
+                            {
+                                Response.Redirect($"StaffView.aspx?username={userNtxtbox.Text}");
+                            }
+                            else if (user.Username == "admin" && user.Password == "admin")
+                            {
+                                Response.Redirect($"AdminView.aspx?username={userNtxtbox.Text}");
+                            }
+                            else
+                            {
+                                Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
+                            }
                         }
-                        else if (user.Password == "staff")
-                        {
-                            Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
-                        }
-                        else if (user.Password == "admin")
-                        {
-                            Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
-                        }
+                        //    Response.Redirect($"Home.aspx?username={userNtxtbox.Text}");
+                        //}
+                        //else if (user.Username == "staff" && user.Password == "staff")
+                        //{
+                        //    Response.Redirect($"StaffView.aspx?username={userNtxtbox.Text}");
+                        //}
+                        //else if (user.Username == "admin" && user.Password == "admin")
+                        //{
+                        //    Response.Redirect($"AdminView.aspx?username={userNtxtbox.Text}");
+                        //}
                         else
                         {
                             string wrongPass = "Incorrect Password";
