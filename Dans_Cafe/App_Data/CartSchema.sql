@@ -4,11 +4,12 @@ DROP TABLE IF EXISTS Cart;
 
 -- Cart
 CREATE TABLE Cart (
-	UserName NVARCHAR(100) NOT NULL,
-	prodID VARCHAR(10) NOT NULL,
-	quantity INT NOT NULL,
-	prodSize VARCHAR(25) NOT NULL,
-	cartID VARCHAR(50) NOT NULL,
+	UserName NVARCHAR(100),
+	prodID VARCHAR(10),
+	prodName VARCHAR(100),
+	quantity INT,
+	prodSize VARCHAR(25),
+	cartID VARCHAR(50),
 	FOREIGN KEY (prodID) REFERENCES Products(prodID),
 	
 );

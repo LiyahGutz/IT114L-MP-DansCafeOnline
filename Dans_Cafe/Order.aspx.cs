@@ -32,6 +32,10 @@ namespace Dans_Cafe
                 }
             }
         }
+        protected void Cart_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserCart.aspx?username=" + Request.QueryString["username"]);
+        }
 
         protected void ProductData()
         {

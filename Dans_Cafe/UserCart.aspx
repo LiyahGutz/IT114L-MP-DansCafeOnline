@@ -9,6 +9,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Repeater ID="CartItemRepeater" runat="server">
+                <ItemTemplate>
+                    <img class="prodPic" src="Pictures/products/<%# Eval("prodID") %>.png" />
+                    <p><%# Eval("prodName") %></p>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
     </form>
 </body>

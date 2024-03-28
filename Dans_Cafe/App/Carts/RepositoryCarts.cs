@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data;
+using Dans_Cafe.App.Products;
 
 namespace Dans_Cafe.App.Carts
 {
@@ -88,6 +89,7 @@ namespace Dans_Cafe.App.Carts
                                         "VALUES (@Username, @prodID, @Quantity, @CartID)";
                                     makeCommand.Parameters.AddWithValue("@Username", username);
                                     makeCommand.Parameters.AddWithValue("@prodID", items.prodID);
+                                    //makeCommand.Parameters.AddWithValue("@prodName", items.prodName);
                                     makeCommand.Parameters.AddWithValue("@Quantity", items.Quantity);
                                     makeCommand.Parameters.AddWithValue("@CartID", cartID);
                                     makeCommand.ExecuteNonQuery();
@@ -106,6 +108,30 @@ namespace Dans_Cafe.App.Carts
             }
         }
 
+        public List<Cart> RetrieveCarts(string username)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlCommand getCommand = connection.CreateCommand())
+            {
+                connection.Open();
+
+                getCommand.CommandText = "SELECT * FROM Cart WHERE cartID LIKE '%' + @Username";
+                getCommand.Parameters.AddWithValue("@Username", username);
+                using (SqlDataReader reader = getCommand.ExecuteReader())
+                {
+                    var goodies = new List<Cart>();
+                    while (reader.Read())
+                    {
+                        goodies.Add(new Cart
+                        {
+                            prodID = reader.GetString(reader.GetOrdinal("prodID")),
+
+                        });
+                    }
+                    return goodies;
+                }
+            }
+        }
 
 
         private string GenerateCartID(int length)

@@ -35,6 +35,7 @@
     <form id="form1" runat="server">
         <h3>Hello, <%=Session["username"] %></h3>
         <div class="container">
+            <asp:Button ID="buttons"  runat="server" Text="Cart" OnClick="Cart_Click" />
             <div class="row">
                 <asp:Repeater ID="ProdItemRepeater" runat="server" OnItemCommand="ProdItemRepeater_ItemCommand">
                     <ItemTemplate>
