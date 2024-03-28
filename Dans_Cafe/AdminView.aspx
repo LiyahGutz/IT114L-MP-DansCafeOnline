@@ -1,14 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminView.aspx.cs" Inherits="Dans_Cafe.AdminView" %>
+﻿<%@ Page MasterPageFile="~/AdminMasterPage.Master" Language="C#" AutoEventWireup="true" CodeBehind="AdminView.aspx.cs" Inherits="Dans_Cafe.AdminView" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <%--links--%>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
-    <title>Admin Dashboard</title>
-</head>
-<body>
+<asp:Content ID="Admin" ContentPlaceHolderID="AdminContent" runat="server">
         <style>
         * {
             margin: 0;
@@ -106,7 +98,7 @@
         <div class="title">
             <h2>Admin Dashboard</h2>
         </div>
-        <form id="form1" runat="server">
+        <%--<form id="form1" runat="server">--%>
             <div class="adminDashboard">
                 <div class="card">
                     <div class="icon">
@@ -133,7 +125,6 @@
                     <asp:Button class="btn" runat="server" Text="View"/>
                 </div>
             </div>
-        </form>
+        <%--</form>--%>
     </div>
-</body>
-</html>
+</asp:Content>
