@@ -97,6 +97,7 @@
     <Content Include="Properties\pastries.png" />
     <Content Include="SignUp.aspx" />
     <Content Include="StaffView.aspx" />
+    <Content Include="UserCart.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +184,13 @@
     </Compile>
     <Compile Include="StaffView.aspx.designer.cs">
       <DependentUpon>StaffView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCart.aspx.cs">
+      <DependentUpon>UserCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCart.aspx.designer.cs">
+      <DependentUpon>UserCart.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -64,7 +64,7 @@ namespace Dans_Cafe.App.Carts
                     {
                         using (SqlCommand findCommand = connection.CreateCommand())
                         {
-                            findCommand.CommandText = "SELECT COUNT(*) FROM Cart WHERE prodID = @prodID AND cartID LIKE '%@Username'";
+                            findCommand.CommandText = "SELECT COUNT(*) FROM Cart WHERE prodID = @prodID AND cartID LIKE '%' + @Username";
                             findCommand.Parameters.AddWithValue("@prodID", items.prodID);
                             findCommand.Parameters.AddWithValue("@Username", username);
 
@@ -84,12 +84,11 @@ namespace Dans_Cafe.App.Carts
                             {
                                 using (SqlCommand makeCommand = connection.CreateCommand())
                                 {
-                                    makeCommand.CommandText = "INSERT INTO Cart (Username, prodID, quantity, prodSize, cartID) " +
-                                        "VALUES (@Username, @prodID, @Quantity, @Size, @CartID)";
+                                    makeCommand.CommandText = "INSERT INTO Cart (UserName, prodID, quantity, cartID) " +
+                                        "VALUES (@Username, @prodID, @Quantity, @CartID)";
                                     makeCommand.Parameters.AddWithValue("@Username", username);
                                     makeCommand.Parameters.AddWithValue("@prodID", items.prodID);
                                     makeCommand.Parameters.AddWithValue("@Quantity", items.Quantity);
-                                    makeCommand.Parameters.AddWithValue("@Size", items.Size);
                                     makeCommand.Parameters.AddWithValue("@CartID", cartID);
                                     makeCommand.ExecuteNonQuery();
                                 }
