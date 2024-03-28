@@ -178,9 +178,9 @@
             }
         }
     </style>
-    <form id="homepage" runat="server">
+    <%--<form id="homepage" runat="server">--%>
         <div class="contain">
-            <p class="welcome">WELCOME TO DAN'S CAFE, <%=Session["username"] %>!</p>
+            <p class="welcome">WELCOME TO DAN'S CAFE<%=Session["username"] %>!</p>
             <p class="intro">Indulge in the cozy place with quality foods and drinks here! Experience our fresh coffee</p>
         </div>
    
@@ -241,6 +241,6 @@
     
         </footer>
 
-    </form>
+    <%--</form>--%>
 </asp:Content>
 

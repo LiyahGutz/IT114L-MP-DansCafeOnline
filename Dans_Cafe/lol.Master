@@ -1,8 +1,6 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="lol.Master.cs" Inherits="Dans_Cafe.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="lol.Master.cs" Inherits="Dans_Cafe.Site2" %>
 
-<!DOCTYPE html>
 
-<html>
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -11,21 +9,22 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <title></title>
 </head>
-<body>
+<form id="masterPage" runat="server">
      <nav class="navbar navbar-expand-md bg-white py-3">
         <div class="container"><img width="169" height="59" src="assets/img/logo.png"><a class="navbar-brand d-flex align-items-center" href="#"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Home.aspx">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                </ul><a class="btn btn-primary bg-danger border-warning ms-md-2" role="button" href="Login.aspx">Logout</a>
+                    <li class="nav-item"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
+                </ul><asp:Button ID="btnLogout" runat="server" CssClass="btn btn-primary bg-danger border-warning ms-md-2" Text="Logout" OnClick="btnLogout_Click" />
             </div>
+
         </div>
     </nav>
     <div>
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         </asp:ContentPlaceHolder>
     </div>
-</body>
-</html>
+</form>
+
